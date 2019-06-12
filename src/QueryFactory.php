@@ -12,7 +12,7 @@ namespace Swoole\SqlQuery;
  *
  * Creates query statement objects.
  *
- * @package Aura.SqlQuery
+ * @package Swoole.SqlQuery
  *
  */
 class QueryFactory
@@ -194,9 +194,9 @@ class QueryFactory
     protected function newInstance($query)
     {
         if ($this->common) {
-            $class = "Aura\SqlQuery\Common";
+            $class = "Swoole\SqlQuery\Common";
         } else {
-            $class = "Aura\SqlQuery\\{$this->db}";
+            $class = "Swoole\SqlQuery\\{$this->db}";
         }
 
         $class .= "\\{$query}";
